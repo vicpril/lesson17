@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.28, created on 2015-06-05 20:57:17
+<?php /* Smarty version 2.6.28, created on 2015-06-06 18:22:13
          compiled from form_small.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('modifier', 'default', 'form_small.tpl', 5, false),array('function', 'html_options', 'form_small.tpl', 60, false),)), $this); ?>
@@ -6,7 +6,7 @@ smarty_core_load_plugins(array('plugins' => array(array('modifier', 'default', '
       accept-charset="utf-8" 
        >
 
-    <input hidden name="id" value="<?php echo ((is_array($_tmp=@$this->_tpl_vars['name']['id'])) ? $this->_run_mod_handler('default', true, $_tmp, '') : smarty_modifier_default($_tmp, '')); ?>
+    <input hidden class="clear_form" name="id" value="<?php echo ((is_array($_tmp=@$this->_tpl_vars['name']['id'])) ? $this->_run_mod_handler('default', true, $_tmp, '') : smarty_modifier_default($_tmp, '')); ?>
 ">
     
     <div class="form-group ">
@@ -114,7 +114,7 @@ smarty_core_load_plugins(array('plugins' => array(array('modifier', 'default', '
 
        
             <div>
-                <input class="add btn btn-info" type="submit" name="button_add" value="Подать объявление" formaction="index.php">
+                <input class="add btn btn-info" type="submit" name="button_add" value="Подать объявление">
                 <input class="cancel btn btn-default" type="button" style="display: done" value="Отмена">
             </div>
         

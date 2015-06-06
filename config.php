@@ -1,16 +1,16 @@
 <?php
 
 error_reporting(E_ERROR | E_WARNING | E_PARSE | E_NOTICE);
-ini_set('display_errors', 0);
+ini_set('display_errors', 1);
 header("Content-Type: text/html; charset=utf-8");
 
 date_default_timezone_set('Asia/Novosibirsk');
 
-include 'connectDB.php';
-include 'function.php';
+include 'db/connectDB.php';
+include 'lib/function.php';
 
 $project_root = __DIR__;
-$filename_user = 'user.php';
+$filename_user = 'db/user.php';
 $smarty_dir = $project_root . '/smarty/';
 
 // put full path to Smarty.class.php

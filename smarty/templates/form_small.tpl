@@ -2,7 +2,7 @@
       accept-charset="utf-8" 
       {*onsubmit="return false;"*} >
 
-    <input hidden name="id" value="{$name.id|default:''}">
+    <input hidden class="clear_form" name="id" value="{$name.id|default:''}">
     
     <div class="form-group ">
         <div class="">
@@ -100,7 +100,7 @@
 
        
             <div>
-                <input class="add btn btn-info" type="submit" name="button_add" value="Подать объявление" formaction="index.php">
+                <input class="add btn btn-info" type="submit" name="button_add" value="Подать объявление">
                 <input class="cancel btn btn-default" type="button" style="display: done" value="Отмена">
             </div>
         

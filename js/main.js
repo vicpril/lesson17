@@ -1,12 +1,10 @@
 function formReset() {
+    $('form.form-horizontal').resetForm();   // функция из jquery.form.min.js
     $('title').text('Доска объявлений');
-    $('form').each(function () {this.reset()});
     $('input[type=submit]').val('Подать объявление');
 }
 
 function showExp(exp) {
-    $('input[name=id]').val(exp.id);
-    var show = $('input[name=id]').val();
     $('form .clear_form').each(function () {
         var name = $(this).attr('name');
         $(this).val(exp[name]);
@@ -20,7 +18,6 @@ function showExp(exp) {
     $('select[name=category_id]').val(exp.category_id);
     // присвоение чеков и селектов
     $('input[type=submit]').val('Изменить объявление');
-    $('input[type=submit]').attr('formaction', 'index.php?id=' + show);
     $('title').text('Объявление - ' + exp.title);
 }
 
@@ -121,6 +118,7 @@ $(document).ready(function () {
                 $('#alert_board').hide('slow');
             }
         }
+        formReset();
         show_alert(response.status, response.message);
     }
     var options = {
@@ -129,11 +127,11 @@ $(document).ready(function () {
         success: showResponse, // post-submit callback 
 
         // other available options: 
-        url: 'ajax.php?add=1', // override for form's 'action' attribute 
-        //type:      type        // 'get' or 'post', override for form's 'method' attribute 
+        url: 'ajax.php?', // override for form's 'action' attribute 
+        type:      'post',        // 'get' or 'post', override for form's 'method' attribute 
         dataType: 'json', // 'xml', 'script', or 'json' (expected server response type) 
         //clearForm: true, // clear all form fields after successful submit 
-        resetForm: true, // reset the form after successful submit 
+//        resetForm: true, // reset the form after successful submit 
 
         // $.ajax options can be used here too, for example: 
         //timeout:   3000 

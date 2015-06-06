@@ -112,7 +112,7 @@ function parceDump($dump_filename, $i = 0, $j = 0) {
 //
 
 $page_from = 'install.php';
-$filename_user = 'user.php';
+$filename_user = 'db/user.php';
 
 if (!isset($_POST['button_install'])) {
     // Стартовая страница index.php

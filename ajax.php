@@ -1,8 +1,8 @@
 <?php
 
 include 'config.php';
-include 'notice_board.php';
-include 'explanation.php';
+include '/lib/notice_board.php';
+include '/lib/explanation.php';
 
 //$instance = Notice_board::instance()->getAllExpFromDB();
 if (isset($_GET['delete'])) {
@@ -17,7 +17,7 @@ if (isset($_GET['show'])) {
     echo json_encode($result);
 }
 
-if (isset($_GET['add']) && isset($_POST['private'])) {
+if (isset($_POST['id'])) {
     $id = $_POST['id'];
 
     if ($_POST['private'] == 0) {
